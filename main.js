@@ -51,9 +51,6 @@ let productos = [
         precio: 1.23,
         imagen: 'item8.jpeg'
     }
-
-
-
 ];
 
 let cartItems = [];
@@ -68,20 +65,20 @@ function renderProducts(){
         divElementItem.classList.add('item');
 
         let imgElementItem = document.createElement('img');
-        imgElementItem.classList.add('item-img');
+        imgElementItem.classList.add('item__img');
         let url = './assets/' + productos[i].imagen;
         imgElementItem.setAttribute('src', url);
 
         let nameElementItem = document.createElement('p');
-        nameElementItem.classList.add('item-name');
+        nameElementItem.classList.add('item__name');
         nameElementItem.textContent = productos[i].nombre;
 
         let priceElementItem = document.createElement('p');
-        priceElementItem.classList.add('item-price');
+        priceElementItem.classList.add('item__price');
         priceElementItem.textContent = productos[i].precio + '€';
      
         let buttonElementItem = document.createElement('button');
-        buttonElementItem.classList.add('item-add-btn');
+        buttonElementItem.classList.add('item__add-btn');
         buttonElementItem.textContent = 'Añadir al carrito';
         buttonElementItem.addEventListener('click', function() { addProductsToCart(productos[i]) });
         
@@ -112,34 +109,34 @@ function renderCart(){
         for( let i = 0; i < cartItems.length; i++){
 
             let elementCartItem = document.createElement('div');
-            elementCartItem.classList.add('cart-item');
+            elementCartItem.classList.add('cart__item');
 
             let elementCartItemDescription = document.createElement('div');
-            // elementCartItemDescription.classList.add('cart-item-description');
+            elementCartItemDescription.classList.add('cart__description');
 
             let elementCartItemSelection = document.createElement('div');
-            elementCartItemSelection.classList.add('cart-item-selection');
+            elementCartItemSelection.classList.add('cart__selection');
 
             let elementCartImg = document.createElement('img');
-            let url2 = './assets/' + productos[i].imagen; 
-            elementCartImg.setAttribute('src', url2);
-            elementCartImg.classList.add('cart-item-img');
+            let url = './assets/' + cartItems[i].imagen;
+            elementCartImg.setAttribute('src', url);
+            elementCartImg.classList.add('cart__img');
             
 
             let elementCartQuantity = document.createElement('p');
-            elementCartQuantity.classList.add('cart-item-quantity');
+            elementCartQuantity.classList.add('cart__quantity');
             elementCartQuantity.textContent = '1X';
 
             let elementCartDescription = document.createElement('p');
-            elementCartDescription.classList.add('cart-item-description');
+            elementCartDescription.classList.add('cart__description');
             elementCartDescription.textContent = cartItems[i].nombre;
 
             let elementCartPrice = document.createElement('p');
-            elementCartPrice.classList.add('cart-item-price');
+            elementCartPrice.classList.add('cart__price');
             elementCartPrice.textContent = cartItems[i].precio + '€';
 
             let elementItemBtn = document.createElement('button');
-            elementItemBtn.classList.add('cart-item-btn');
+            elementItemBtn.classList.add('cart__item-btn');
             elementItemBtn.textContent = '-';
             elementItemBtn.addEventListener('click', function() { deleteProductFromCart(i) });
 
@@ -161,7 +158,7 @@ function renderCart(){
         }
 
         let elementTotal = document.createElement('p');
-        elementTotal.classList.add('cart-total');
+        elementTotal.classList.add('cart__total');
         elementTotal.textContent = 'Total: ' + totalPrice + '€';
 
         elementCartList.appendChild(elementTotal);

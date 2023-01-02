@@ -1,0 +1,19 @@
+
+.container{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content:center;
+    
+}
+
+.main{
+    width: 70%;
+    margin: 20px 0px 60px 20px;
+    &__text{
+        font-size: 40px;
+        font-weight: bold;
+        border-bottom: 3px solid #C8C8C8;
+        padding: 20px;
+    }
+}

@@ -1,0 +1,255 @@
+@charset "UTF-8";
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/*FONTS*/
+/* Configuramos la tipografía para toda la web */
+body {
+  margin: 0 auto;
+  padding: 0;
+  min-height: 100vh;
+  font-size: 100%;
+  max-width: 1440px;
+  background: #fff;
+  color: #000;
+  font-family: sans-serif;
+}
+
+/* HEADER */
+.header {
+  background-color: #5BB289;
+  padding: 20px;
+}
+
+.logo {
+  width: 250px;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.main {
+  width: 70%;
+  margin: 20px 0px 60px 20px;
+}
+.main__text {
+  font-size: 40px;
+  font-weight: bold;
+  border-bottom: 3px solid #C8C8C8;
+  padding: 20px;
+}
+
+/*PRODUCTOS*/
+.item {
+  border: 1px solid #C8C8C8;
+  padding: 15px;
+  width: 260px;
+  margin: 10px;
+  display: inline-block;
+}
+.item__img {
+  max-width: 250px;
+}
+.item__name {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 10px;
+}
+.item__price {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 10px;
+}
+.item__add-btn {
+  border-radius: 20px;
+  border: none;
+  background-color: #F9B42A;
+  color: #714000;
+  font-size: 25px;
+  padding: 10px 20px;
+  margin: 0;
+  min-width: 230px;
+}
+
+/*CARRO*/
+.cart {
+  width: 30%;
+  margin: 20px 0px 60px 40px;
+  padding: 0px 60px;
+  border-left: 3px solid #C8C8C8;
+  /*Hay productos*/
+}
+.cart__container {
+  margin-top: 20px;
+}
+.cart__text {
+  font-size: 40px;
+  font-weight: bold;
+  border-bottom: 3px solid #C8C8C8;
+  padding: 20px;
+}
+.cart__item {
+  align-items: center;
+}
+.cart__description {
+  margin: 5px;
+}
+.cart__selection {
+  display: flex;
+  justify-content: space-between;
+}
+.cart__img {
+  width: 100px;
+}
+.cart__name {
+  font-size: 20px;
+  font-weight: bold;
+}
+.cart__price {
+  margin: 5px;
+  font-weight: bold;
+  border-bottom: 2px solid #C8C8C8;
+}
+.cart__quantity {
+  font-weight: bold;
+  font-size: 25px;
+  color: maroon;
+}
+.cart__item-btn {
+  border-radius: 50px;
+  border: none;
+  background-color: #EAABA7;
+  color: #951D14;
+  width: 30px;
+  height: 30px;
+  margin: 5px 0;
+}
+.cart__total {
+  padding: 15px;
+  background-color: #FBC244;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/*No hay productos*/
+.no-items {
+  padding: 30px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.no-items__text {
+  text-align: center;
+  color: #A09FA0;
+  font-size: 22px;
+}
+
+/*FOOTER*/
+.footer {
+  background-color: #F7F8F6;
+}
+.footer__container {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+.footer__logo {
+  width: 200px;
+  margin: auto;
+  margin-right: 100px;
+}
+.footer__links-column {
+  margin-right: 100px;
+}
+.footer__link {
+  color: #A09FA0;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 100;
+  margin-bottom: 15px;
+  display: block;
+}/*# sourceMappingURL=main.css.map */
