@@ -77,13 +77,12 @@
 
   /* Configuramos la tipografía para toda la web */
   body {
+    @include colorized($background: #fff);
     @include spaceling(0 auto);
     min-height: 100vh;
     font-size: 100%;
     max-width: 1440px;
-    background: #fff;
-    color: #000;
-    font-family: sans-serif;
+    font-family: $font-family;
   }
 
  

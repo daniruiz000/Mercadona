@@ -1,26 +1,21 @@
             /*FOOTER*/
 .footer {
-    background-color: #F7F8F6; 
+    @include colorized($background-color:#dddddd);
     &__container{
-    display: flex;
-    width: 100%;
-    margin: 0 auto; 
-    padding: 40px 0;
+        width: 100%;
+        @include spaceling(0, 20px 0);
+        @include flex($wrap: nowrap,$justify-content:space-around, $align-items: center);
     }
     &__logo{
-    width: 200px;
-    margin: auto;
-    margin-right: 100px;
+        width: 150px;
+        @include spaceling(10px);
     }
     &__links-column {
-    margin-right: 100px;
+        @include spaceling(20px);
     }
     &__link {
-    color: #A09FA0;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 100;
-    margin-bottom: 15px;
-    display: block; 
+        @include spaceling(0 0 20px 0);
+        @include text-as(0.8em, lighter);
+        @include colorized( #A09FA0);
     }
 }

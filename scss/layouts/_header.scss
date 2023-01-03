@@ -1,11 +1,10 @@
             /* HEADER */
   
 .header {
-    background-color: #5BB289;
-    padding: 20px;
+    @include colorized($background-color:$color-thrid);
+    @include spaceling(0, 20px);
+    &__logo {
+        width: 250px;
+    }
 }
               
-.logo {
-    width: 250px;
-    height: auto;
-}

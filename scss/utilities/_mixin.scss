@@ -1,4 +1,4 @@
-@mixin flex ($display:flex, $direction:row, $wrap:nowrap, $justify-content:normal, $align-items:normal){
+@mixin flex ($display:flex, $direction:row, $wrap:wrap, $justify-content:normal, $align-items:normal){
     display: $display;
     flex-flow: $direction $wrap;
     justify-content:$justify-content;
@@ -10,7 +10,7 @@
     padding:$padding;
 }
 
-@mixin colorized ($color:$color-principal, $background-color:transparent){
+@mixin colorized ($color:black, $background-color:transparent){
     color: $color;
     background-color:$background-color;
 }

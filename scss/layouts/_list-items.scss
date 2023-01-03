@@ -1,33 +1,33 @@
             /*PRODUCTOS*/
 
-
-                .item{
-                    border: 1px solid #C8C8C8;
-                    padding: 15px;
-                    width: 260px;
-                    margin: 10px;
-                    display: inline-block;
-                    &__img{
-                        max-width: 250px;
-                    }
-                    &__name{
-                        font-weight: bold;
-                        font-size: 20px;
-                        margin: 10px;
-                    }
-                    &__price{
-                        font-size: 30px;
-                        font-weight: bold;
-                        margin: 10px;
-                    }
-                    &__add-btn{
-                        border-radius: 20px;
-                        border:none;
-                        background-color: #F9B42A;
-                        color: #714000;
-                        font-size: 25px;
-                        padding: 10px 20px;
-                        margin: 0 ;
-                        min-width: 230px;
-                    }
-                }
+    
+.item{
+    @include spaceling(10px, 15px);
+    border: 1px solid #C8C8C8;
+    width: 150px;
+    &__list{
+        @include flex($align-items:center);
+    }
+    &__img{
+        width: 150px;
+    }
+    &__name{
+        @include text-as(1em, bold);
+        @include spaceling(10px);
+    }
+    &__price{
+        @include text-as(1em, bold);
+        @include spaceling(10px);
+    }
+    &__add-btn{
+        @include text-as(1em, bold, $text-align:center);
+        @include spaceling(0, 10px);
+        @include colorized($color-secondary, $color-principal);
+        border-radius: 20px;
+        border:none;
+        width: 100%;
+        &:hover{
+            @include colorized(black, $color-fourth);
+        }
+    }
+}

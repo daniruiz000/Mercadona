@@ -2,64 +2,54 @@
 
   .cart{
     width: 30%;
-    margin: 20px 0px 60px 40px;
-    padding: 0px 60px;
+    @include spaceling(20px, 10px);
     border-left: 3px solid #C8C8C8;
     &__container{
-        margin-top: 20px;
+        @include spaceling(20px 0 0 0);
     }
     &__text{
-        font-size: 40px;
-        font-weight: bold;
+        @include spaceling(0, 20px);
+        @include text-as(2em, bold);
         border-bottom: 3px solid #C8C8C8;
-        padding: 20px;
-
     }
    /*Hay productos*/
 
     &__item{
-        align-items: center;
-       }
-    &__description{
-        margin: 5px;
+        @include flex($direction:column);
     }
     &__selection{
-        display: flex;
-        justify-content: space-between
+        @include flex($justify-content: space-between);
     }
     &__img{
         width: 100px;
     }
     &__name{
-        font-size: 20px;
-        font-weight: bold;
+        @include text-as(1em,bold);
     }
     &__price{
-        margin: 5px;
-        font-weight: bold;
+        @include text-as(1em,bold);
+        @include spaceling(5px);
         border-bottom: 2px solid #C8C8C8;
     }
     &__quantity{
-        font-weight: bold;
-        font-size: 25px;
-        color: maroon;
+        @include text-as(1em,bold);
+        @include colorized($color-five);
     }
     &__item-btn{
+        @include colorized($color-five, $color-six);
+        @include spaceling(10px);
         border-radius: 50px;
         border:none;
-        background-color: #EAABA7;
-        color: #951D14;
         width: 30px;
         height: 30px;
-        margin: 5px 0;
+        &:hover{
+            @include colorized($background-color:$color-fourth);
+        }
     }
     &__total{
-        padding: 15px;
-        background-color: #FBC244;
-        color: #fff;
-        font-size: 20px;
-        text-align: center;
-        font-weight: bold;
+        @include spaceling(0, 15px);
+        @include colorized(#fff, $color-principal);
+        @include text-as(1.5em, bold,$text-align: center);
     }
 }
 
@@ -68,14 +58,10 @@
 
 
 .no-items{
-    padding: 30px;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    @include flex($justify-content: flex-start);
+    @include spaceling(0, 20px);
     &__text{
-        text-align: center;
-        color: #A09FA0;
-        font-size: 22px;
-      
+        @include text-as(1em, $text-align:center);
+        @include colorized($color-seven);
     }
 }
