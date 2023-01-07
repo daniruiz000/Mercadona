@@ -152,8 +152,7 @@ function renderCart(){
             elementCartItem.appendChild(elementCartItemSelection);
             
             elementCartList.appendChild(elementCartItem);
-            
-            console.log(cartItems[i].precio);
+    
             totalPrice += cartItems[i].precio;            
         }
 
